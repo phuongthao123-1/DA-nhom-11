@@ -1,0 +1,296 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header bg-primary text-white text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" data-aos="fade-up">
+                <h1 class="display-4 fw-bold mb-3">Kỹ năng</h1>
+                <p class="lead mb-0">Khám phá kỹ năng và chuyên môn đa dạng của Elon Musk</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Skills Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <h2>Kỹ năng kỹ thuật</h2>
+            <p>Elon Musk nổi tiếng với kiến thức sâu rộng về công nghệ và khả năng học hỏi nhanh chóng</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="technical-skills-content mb-5 mb-lg-0">
+                    <p>Elon Musk thường được biết đến với khả năng hiểu biết sâu sắc về nhiều lĩnh vực kỹ thuật khác nhau. Khả năng tiếp thu kiến thức nhanh chóng của ông đã cho phép ông tham gia vào các ngành công nghiệp phức tạp như hàng không vũ trụ, ô tô điện, năng lượng tái tạo, trí tuệ nhân tạo và công nghệ thần kinh.</p>
+                    <p>Phương pháp tiếp cận kỹ thuật của Musk thường liên quan đến việc chia nhỏ các vấn đề phức tạp thành các nguyên tắc vật lý cơ bản và sau đó sử dụng những hiểu biết đó để tạo ra các giải pháp sáng tạo. Chiến lược này đã dẫn đến những đột phá quan trọng trong mọi lĩnh vực mà ông tham gia.</p>
+                    <div class="mt-4">
+                        <a href="{% url 'projects:projects' %}" class="btn btn-primary btn-custom">Xem dự án</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="skills-chart mb-5">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Kỹ thuật hàng không vũ trụ</h5>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Kỹ thuật phần mềm</h5>
+                            <span>92%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Kỹ thuật ô tô điện</h5>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Công nghệ năng lượng tái tạo</h5>
+                            <span>88%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Trí tuệ nhân tạo</h5>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Business Skills Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <h2>Kỹ năng kinh doanh</h2>
+            <p>Ngoài kỹ năng kỹ thuật, Elon Musk còn sở hữu một bộ kỹ năng kinh doanh và lãnh đạo đáng kinh ngạc</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Tầm nhìn chiến lược</h4>
+                    <p>Khả năng đặt ra và theo đuổi các mục tiêu dài hạn đầy tham vọng, thúc đẩy đổi mới và phát triển.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Lãnh đạo</h4>
+                    <p>Khả năng truyền cảm hứng và hướng dẫn nhóm đa ngành hướng tới mục tiêu chung, thúc đẩy đổi mới.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Khởi nghiệp</h4>
+                    <p>Tư duy khởi nghiệp mạnh mẽ với khả năng xác định cơ hội, huy động vốn và xây dựng doanh nghiệp thành công.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h4>Marketing</h4>
+                    <p>Nắm bắt tài tình cách sử dụng phương tiện truyền thông xã hội và quan hệ công chúng để xây dựng thương hiệu và thu hút sự chú ý.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h4>Quản lý dự án</h4>
+                    <p>Khả năng điều phối và quản lý các dự án phức tạp, đồng thời đảm bảo tiến độ và kết quả.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="500">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h4>Huy động vốn</h4>
+                    <p>Chuyên môn về huy động vốn từ nhiều nguồn, bao gồm nhà đầu tư tư nhân, thị trường công và hợp đồng chính phủ.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="600">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4>Giao tiếp</h4>
+                    <p>Khả năng truyền đạt những ý tưởng phức tạp một cách rõ ràng và thuyết phục cho nhiều đối tượng khác nhau.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h4>Khả năng thích ứng</h4>
+                    <p>Khả năng điều chỉnh nhanh chóng trước thay đổi của thị trường, quy định và động lực công nghệ.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Personal Skills Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <h2>Phẩm chất cá nhân</h2>
+            <p>Một số phẩm chất cá nhân nổi bật đã giúp Elon Musk thành công trong sự nghiệp của mình</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 mb-4" data-aos="fade-up">
+                <div class="personal-skill-item d-flex align-items-center bg-white p-4 rounded shadow-sm">
+                    <div class="personal-skill-icon me-4">
+                        <i class="fas fa-fire text-primary"></i>
+                    </div>
+                    <div>
+                        <h4>Đam mê mãnh liệt</h4>
+                        <p class="mb-0">Niềm đam mê mãnh liệt đối với công việc và sứ mệnh của mình, thúc đẩy sự kiên trì và cống hiến.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="personal-skill-item d-flex align-items-center bg-white p-4 rounded shadow-sm">
+                    <div class="personal-skill-icon me-4">
+                        <i class="fas fa-book text-primary"></i>
+                    </div>
+                    <div>
+                        <h4>Học hỏi liên tục</h4>
+                        <p class="mb-0">Cam kết học hỏi liên tục, tiếp thu kiến thức từ nhiều ngành khác nhau để giải quyết vấn đề.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="personal-skill-item d-flex align-items-center bg-white p-4 rounded shadow-sm">
+                    <div class="personal-skill-icon me-4">
+                        <i class="fas fa-fingerprint text-primary"></i>
+                    </div>
+                    <div>
+                        <h4>Tư duy độc lập</h4>
+                        <p class="mb-0">Khả năng suy nghĩ độc lập và thách thức các giả định thông thường để đạt được kết quả đột phá.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="personal-skill-item d-flex align-items-center bg-white p-4 rounded shadow-sm">
+                    <div class="personal-skill-icon me-4">
+                        <i class="fas fa-bolt text-primary"></i>
+                    </div>
+                    <div>
+                        <h4>Chấp nhận rủi ro</h4>
+                        <p class="mb-0">Sẵn sàng chấp nhận rủi ro tính toán và theo đuổi những cơ hội mà người khác có thể coi là quá táo bạo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="personal-skill-item d-flex align-items-center bg-white p-4 rounded shadow-sm">
+                    <div class="personal-skill-icon me-4">
+                        <i class="fas fa-hourglass-half text-primary"></i>
+                    </div>
+                    <div>
+                        <h4>Đạo đức làm việc</h4>
+                        <p class="mb-0">Đạo đức làm việc phi thường, thường làm việc 80-100 giờ mỗi tuần để đạt được các mục tiêu của mình.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="personal-skill-item d-flex align-items-center bg-white p-4 rounded shadow-sm">
+                    <div class="personal-skill-icon me-4">
+                        <i class="fas fa-chess text-primary"></i>
+                    </div>
+                    <div>
+                        <h4>Kiên trì</h4>
+                        <p class="mb-0">Sự kiên trì đáng kinh ngạc khi đối mặt với những thất bại và thách thức, từ chối từ bỏ tầm nhìn của mình.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section-padding bg-primary text-white text-center">
+    <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="mb-4">Khám phá các dự án do kỹ năng của Elon Musk tạo ra</h2>
+                <p class="mb-4">Xem các dự án đột phá mà Elon Musk đã phát triển bằng cách kết hợp các kỹ năng và phẩm chất đa dạng của mình.</p>
+                <a href="{% url 'projects:projects' %}" class="btn btn-outline-light btn-custom">Xem dự án</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Personal Skill Icon */
+    .personal-skill-icon {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        border-radius: 50%;
+        background-color: rgba(0, 123, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    
+    .personal-skill-item {
+        transition: var(--transition);
+        height: 100%;
+    }
+    
+    .personal-skill-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+    }
+</style>
+{% endblock %} 

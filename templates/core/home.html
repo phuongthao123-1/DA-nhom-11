@@ -1,0 +1,334 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" id="home">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 hero-content" data-aos="fade-right">
+                <span class="hero-subtitle text-primary fw-500 mb-3 d-block">Doanh nhân & Nhà đổi mới</span>
+                <h1 class="mb-4">Chào mừng đến với<br>thế giới của <span class="text-primary">Elon Musk</span></h1>
+                <h3 class="mb-4">Tôi là <span class="typed-text" data-typed-strings="Nhà Đổi Mới,Nhà Sáng Lập SpaceX,CEO Tesla,Nhà Công Nghệ,Nhà Tư Duy Tương Lai"></span></h3>
+                <p class="mb-4">Khám phá hành trình, dự án và tầm nhìn của một trong những doanh nhân có ảnh hưởng nhất thế giới hiện nay.</p>
+                <div class="d-flex">
+                    <a href="{% url 'about:about' %}" class="btn btn-primary btn-custom me-3">Tìm hiểu thêm <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'contact:contact' %}" class="btn btn-outline-light btn-custom">Liên hệ <i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
+                <div class="hero-image-container position-relative">
+                    <img src="https://pngimg.com/uploads/elon_musk/elon_musk_PNG11.png" alt="Elon Musk" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#about" class="hero-scroll-down text-white">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</section>
+
+<!-- About Section -->
+<section class="section-padding" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                <div class="about-img">
+                    <img src="https://pngimg.com/uploads/elon_musk/elon_musk_PNG11.png" alt="Elon Musk"  class="img-fluid rounded shadow">
+                    <div class="about-experience position-absolute">
+                        <div class="exp-content text-center p-4 rounded bg-primary text-white">
+                            <h2 class="mb-1">25+</h2>
+                            <p class="mb-0">Năm kinh nghiệm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="section-title text-start">
+                    <span class="subtitle text-primary">Giới thiệu</span>
+                    <h2>Về Elon Musk</h2>
+                </div>
+                <p>Elon Musk là một doanh nhân, nhà đổi mới và kỹ sư người Nam Phi-Mỹ nổi tiếng với tư cách là người sáng lập, CEO, và kỹ sư trưởng/nhà thiết kế của SpaceX; Nhà đầu tư ban đầu, CEO và kiến trúc sư sản phẩm của Tesla, Inc.; người sáng lập The Boring Company; và đồng sáng lập Neuralink và OpenAI.</p>
+                <p>Musk là một trong những doanh nhân thành công và có tầm ảnh hưởng nhất thế giới, với tầm nhìn về tương lai tập trung vào năng lượng tái tạo, du hành không gian, và trí tuệ nhân tạo.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="about-feature d-flex" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div>
+                                <h5>SpaceX</h5>
+                                <p class="mb-0">Giảm chi phí khám phá không gian và đưa con người lên sao Hỏa.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="about-feature d-flex" data-aos="fade-up" data-aos-delay="200">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div>
+                                <h5>Tesla</h5>
+                                <p class="mb-0">Đẩy nhanh quá trình chuyển đổi thế giới sang năng lượng bền vững.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="about-feature d-flex" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <h5>Neuralink</h5>
+                                <p class="mb-0">Phát triển giao diện não-máy tính tốc độ cao, được cấy ghép.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="about-feature d-flex" data-aos="fade-up" data-aos-delay="400">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-subway"></i>
+                            </div>
+                            <div>
+                                <h5>The Boring Company</h5>
+                                <p class="mb-0">Xây dựng mạng lưới đường hầm để giải quyết tắc nghẽn giao thông.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="{% url 'about:about' %}" class="btn btn-primary btn-custom">Xem tiểu sử chi tiết <i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="bg-primary section-padding">
+    <div class="container">
+        <div class="row text-center text-white">
+            <div class="col-md-3 col-6 mb-4 mb-md-0" data-aos="fade-up">
+                <i class="fas fa-rocket fa-3x mb-3"></i>
+                <h2 class="counter" data-count="172">0</h2>
+                <p class="mb-0">Phóng tên lửa SpaceX</p>
+            </div>
+            <div class="col-md-3 col-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-car fa-3x mb-3"></i>
+                <h2 class="counter" data-count="3000000">0</h2>
+                <p class="mb-0">Xe Tesla sản xuất</p>
+            </div>
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-solar-panel fa-3x mb-3"></i>
+                <h2 class="counter" data-count="500000">0</h2>
+                <p class="mb-0">Pin Powerwall</p>
+            </div>
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-users fa-3x mb-3"></i>
+                <h2 class="counter" data-count="110000">0</h2>
+                <p class="mb-0">Nhân viên toàn cầu</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section-padding" id="projects">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <h2>Dự án nổi bật</h2>
+            <p>Khám phá một số dự án và sáng kiến ​​đột phá nhất của Elon Musk đã và đang thay đổi thế giới.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                <div class="project-card custom-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BhY2V4fGVufDB8fDB8fHww" alt="SpaceX" class="img-fluid">
+                        <div class="project-overlay">
+                            <a href="{% url 'projects:projects' %}"><i class="fas fa-link"></i></a>
+                            <a href="https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BhY2V4fGVufDB8fDB8fHww" class="gallery-item"><i class="fas fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="category">Khám phá không gian</span>
+                        <h4>SpaceX</h4>
+                        <p>Cách mạng hóa ngành công nghiệp không gian với tên lửa có thể tái sử dụng và giảm chi phí phóng vệ tinh.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card custom-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVzbGF8ZW58MHx8MHx8fDA%3D" alt="Tesla" class="img-fluid">
+                        <div class="project-overlay">
+                            <a href="{% url 'projects:projects' %}"><i class="fas fa-link"></i></a>
+                            <a href="https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVzbGF8ZW58MHx8MHx8fDA%3D" class="gallery-item"><i class="fas fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="category">Năng lượng bền vững</span>
+                        <h4>Tesla</h4>
+                        <p>Thúc đẩy sự chuyển đổi sang phương tiện điện hóa với các mẫu xe tiên tiến và công nghệ pin.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card custom-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJhaW4lMjB0ZWNofGVufDB8fDB8fHww" alt="Neuralink" class="img-fluid">
+                        <div class="project-overlay">
+                            <a href="{% url 'projects:projects' %}"><i class="fas fa-link"></i></a>
+                            <a href="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJhaW4lMjB0ZWNofGVufDB8fDB8fHww" class="gallery-item"><i class="fas fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="category">Công nghệ sinh học</span>
+                        <h4>Neuralink</h4>
+                        <p>Phát triển giao diện não-máy tính để giúp con người hòa nhập với trí tuệ nhân tạo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4" data-aos="fade-up">
+            <a href="{% url 'projects:projects' %}" class="btn btn-primary btn-custom">Xem tất cả dự án</a>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="section-padding bg-light" id="skills">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <h2>Kỹ năng và chuyên môn</h2>
+            <p>Elon Musk nổi tiếng với kiến thức sâu rộng và khả năng học hỏi nhanh chóng trong nhiều lĩnh vực.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4>Kỹ thuật hàng không vũ trụ</h4>
+                    <p>Chuyên môn về động cơ tên lửa, thiết kế phi thuyền và hệ thống đẩy tiên tiến.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-car-battery"></i>
+                    </div>
+                    <h4>Công nghệ năng lượng</h4>
+                    <p>Chuyên gia về pin, năng lượng mặt trời và các hệ thống lưu trữ năng lượng tiên tiến.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>Trí tuệ nhân tạo</h4>
+                    <p>Tầm nhìn về việc phát triển AI an toàn và có lợi cho con người thông qua các công ty như OpenAI.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-box text-center p-4 bg-white rounded shadow-sm">
+                    <div class="skill-icon mx-auto">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Kinh doanh và đổi mới</h4>
+                    <p>Khả năng độc đáo trong việc tạo ra và phát triển các công ty đột phá trong nhiều ngành.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4" data-aos="fade-up">
+            <a href="{% url 'skills:skills' %}" class="btn btn-primary btn-custom">Xem tất cả kỹ năng</a>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="section-padding" id="blog">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <h2>Bài viết mới nhất</h2>
+            <p>Khám phá những suy nghĩ, cập nhật và thông tin chi tiết mới nhất về các dự án và tầm nhìn của Elon Musk.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BhY2V4fGVufDB8fDB8fHww" alt="Blog Image" class="img-fluid">
+                        <div class="blog-date">15 tháng 5, 2023</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-folder"></i> Công nghệ</span>
+                            <span><i class="fas fa-user"></i> Admin</span>
+                        </div>
+                        <h4><a href="{% url 'blog:blog_list' %}">Starship: Tương lai của du hành liên hành tinh</a></h4>
+                        <p>Tìm hiểu về tàu vũ trụ Starship của SpaceX và cách nó sẽ cách mạng hóa du hành vũ trụ.</p>
+                        <a href="{% url 'blog:blog_list' %}" class="read-more">Đọc thêm <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BhY2V4fGVufDB8fDB8fHww" alt="Blog Image" class="img-fluid">
+                        <div class="blog-date">10 tháng 5, 2023</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-folder"></i> Năng lượng</span>
+                            <span><i class="fas fa-user"></i> Admin</span>
+                        </div>
+                        <h4><a href="{% url 'blog:blog_list' %}">Tesla và tương lai của lưu trữ năng lượng</a></h4>
+                        <p>Cách các sản phẩm lưu trữ năng lượng của Tesla đang định hình tương lai của lưới điện và năng lượng tái tạo.</p>
+                        <a href="{% url 'blog:blog_list' %}" class="read-more">Đọc thêm <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BhY2V4fGVufDB8fDB8fHww" alt="Blog Image" class="img-fluid">
+                        <div class="blog-date">5 tháng 5, 2023</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-folder"></i> AI</span>
+                            <span><i class="fas fa-user"></i> Admin</span>
+                        </div>
+                        <h4><a href="{% url 'blog:blog_list' %}">Tương lai của trí tuệ nhân tạo theo Elon Musk</a></h4>
+                        <p>Khám phá quan điểm của Elon Musk về sự phát triển của AI và tầm nhìn của ông về tương lai.</p>
+                        <a href="{% url 'blog:blog_list' %}" class="read-more">Đọc thêm <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4" data-aos="fade-up">
+            <a href="{% url 'blog:blog_list' %}" class="btn btn-primary btn-custom">Xem tất cả bài viết</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA Section -->
+<section class="bg-primary section-padding text-white">
+    <div class="container text-center" data-aos="fade-up">
+        <h2 class="mb-4">Liên hệ với chúng tôi ngay hôm nay</h2>
+        <p class="mb-4">Bạn có câu hỏi hoặc muốn biết thêm thông tin về Elon Musk và các dự án của ông? Hãy liên hệ với chúng tôi ngay bây giờ.</p>
+        <a href="{% url 'contact:contact' %}" class="btn btn-outline-light btn-custom">Liên hệ ngay</a>
+    </div>
+</section>
+
+<!-- Button Back to Top -->
+<a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+{% endblock %}
+
+{% block extra_js %}
+<!-- Typed.js for typing effect -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+{% endblock %} 

@@ -1,0 +1,662 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="breadcrumb-wrap mb-2">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="{% url 'core:home' %}">Trang chủ</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Giới thiệu</li>
+                        </ol>
+                    </nav>
+                </div>
+                <h1 class="display-4 fw-bold mb-3">Giới thiệu</h1>
+                <p class="lead mb-4">Hành trình từ một đứa trẻ ở Nam Phi đến vị trí nhà đổi mới hàng đầu thế giới</p>
+                <div class="hero-buttons">
+                    <a href="#timeline" class="btn btn-primary btn-custom me-3">Hành trình <i class="fas fa-angle-down"></i></a>
+                    <a href="#skills" class="btn btn-outline-primary btn-custom">Kỹ năng <i class="fas fa-chart-bar"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
+                <div class="page-header-image">
+                    <img src="https://pngimg.com/uploads/elon_musk/elon_musk_PNG7.png" alt="Elon Musk" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section-padding" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                <div class="about-img position-relative">
+                    <img src="https://media.vov.vn/sites/default/files/styles/large/public/2025-03/1_22.jpg" alt="Elon Musk" class="img-fluid">
+                    <div class="about-experience position-absolute">
+                        <div class="exp-content text-center p-4 rounded bg-primary text-white">
+                            <h2 class="mb-1">25+</h2>
+                            <p class="mb-0">Năm kinh nghiệm</p>
+                        </div>
+                    </div>
+                    <div class="about-signature position-absolute">
+                        <img src="https://pngimg.com/uploads/elon_musk/elon_musk_PNG7.png" alt="Elon Musk" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="section-title text-start">
+                    <span class="subtitle text-primary">Tiểu sử</span>
+                    <h2>Về Elon Musk</h2>
+                </div>
+                <p class="lead mb-4">Elon Reeve Musk (sinh ngày 28 tháng 6 năm 1971) là một doanh nhân, nhà đổi mới công nghệ và kỹ sư người Nam Phi-Mỹ.</p>
+                <p>Ông là người sáng lập, CEO và kỹ sư trưởng/nhà thiết kế của SpaceX; Nhà đầu tư ban đầu, CEO và kiến trúc sư sản phẩm của Tesla, Inc.; người sáng lập The Boring Company; và đồng sáng lập Neuralink và OpenAI.</p>
+                <p>Musk là một trong những doanh nhân thành công và có tầm ảnh hưởng nhất thế giới, với tầm nhìn về tương lai tập trung vào năng lượng tái tạo, du hành không gian, và trí tuệ nhân tạo.</p>
+                
+                <div class="about-features mt-5">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="about-feature-item d-flex">
+                                <div class="icon-box me-3">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div>
+                                    <h5>Tầm nhìn đột phá</h5>
+                                    <p class="mb-0">Tầm nhìn rõ ràng về tương lai, tập trung vào việc mở rộng nền văn minh nhân loại.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="about-feature-item d-flex">
+                                <div class="icon-box me-3">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div>
+                                    <h5>Đổi mới liên tục</h5>
+                                    <p class="mb-0">Luôn đi tiên phong trong việc phá vỡ ranh giới công nghệ và tạo ra những đột phá.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="about-feature-item d-flex">
+                                <div class="icon-box me-3">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <h5>Tinh thần kinh doanh</h5>
+                                    <p class="mb-0">Khả năng độc đáo trong việc xây dựng và mở rộng các công ty thành công.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="about-feature-item d-flex">
+                                <div class="icon-box me-3">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h5>Lãnh đạo tài ba</h5>
+                                    <p class="mb-0">Khả năng dẫn dắt đội ngũ tài năng và truyền cảm hứng cho họ đạt mục tiêu tầm cao.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-buttons mt-4">
+                    <a href="{% url 'projects:projects' %}" class="btn btn-primary btn-custom me-3">Dự án <i class="fas fa-briefcase"></i></a>
+                    <a href="{% url 'contact:contact' %}" class="btn btn-outline-primary btn-custom">Liên hệ <i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="section-padding bg-light" id="timeline">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <span class="subtitle text-primary">Dấu mốc</span>
+            <h2>Hành trình của Elon Musk</h2>
+            <p>Khám phá hành trình đáng kinh ngạc của Elon Musk từ thời thơ ấu đến khi trở thành một trong những doanh nhân có ảnh hưởng nhất thế giới</p>
+        </div>
+        
+        <div class="modern-timeline" data-aos="fade-up">
+            <div class="timeline-wrapper">
+                <div class="timeline-item left">
+                    <div class="timeline-badge">
+                        <span>1971</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Thời thơ ấu</h4>
+                            <p>Elon Reeve Musk sinh ngày 28 tháng 6 năm 1971 tại Pretoria, Nam Phi.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-badge">
+                        <span>1983</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Lập trình viên trẻ</h4>
+                            <p>Học lập trình máy tính vào năm 12 tuổi và bán trò chơi máy tính đầu tiên của mình có tên "Blastar" với giá 500 đô la.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-badge">
+                        <span>1995</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Đại học</h4>
+                            <p>Tốt nghiệp Đại học Pennsylvania với hai bằng cử nhân về vật lý và kinh tế.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-badge">
+                        <span>1999</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>PayPal</h4>
+                            <p>Đồng sáng lập X.com, sau này trở thành PayPal và được bán cho eBay với giá 1,5 tỷ đô la vào năm 2002.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-badge">
+                        <span>2002</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-space-shuttle"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>SpaceX</h4>
+                            <p>Thành lập SpaceX với mục tiêu giảm chi phí du hành vũ trụ và đưa con người lên sao Hỏa.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-badge">
+                        <span>2004</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Tesla</h4>
+                            <p>Đầu tư vào Tesla Motors và trở thành Chủ tịch công ty. Sau đó trở thành CEO vào năm 2008.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-badge">
+                        <span>2016</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Neuralink</h4>
+                            <p>Đồng sáng lập Neuralink, một công ty khởi nghiệp công nghệ thần kinh và The Boring Company, một công ty đào hầm và cơ sở hạ tầng.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-badge">
+                        <span>2022</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Twitter (X)</h4>
+                            <p>Mua lại Twitter với giá 44 tỷ đô la và trở thành CEO, sau đó đổi tên thành X.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="section-padding" id="skills">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <span class="subtitle text-primary">Khả năng</span>
+            <h2>Kỹ năng & Chuyên môn</h2>
+            <p>Elon Musk nổi tiếng với kiến thức sâu rộng và khả năng học hỏi nhanh chóng trong nhiều lĩnh vực</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="skills-wrapper p-4 rounded bg-white shadow-sm">
+                    <h3 class="mb-4">Kỹ năng kỹ thuật</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Kỹ thuật hàng không vũ trụ</h5>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Công nghệ năng lượng bền vững</h5>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Trí tuệ nhân tạo</h5>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Công nghệ sinh học</h5>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="skills-wrapper p-4 rounded bg-white shadow-sm">
+                    <h3 class="mb-4">Kỹ năng kinh doanh</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Lãnh đạo & Quản lý</h5>
+                            <span>98%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 98%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Kinh doanh & Khởi nghiệp</h5>
+                            <span>97%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 97%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Tư duy chiến lược</h5>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <h5>Đổi mới sáng tạo</h5>
+                            <span>99%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 99%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Achievements Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <span class="subtitle text-primary">Thành tựu</span>
+            <h2>Giải thưởng & Vinh danh</h2>
+            <p>Những thành tựu và sự công nhận quan trọng trong sự nghiệp của Elon Musk</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                <div class="achievement-card text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="achievement-icon mx-auto mb-4">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h4>Giải thưởng Heinlein</h4>
+                    <p class="mb-0">Được trao năm 2011 vì những đóng góp cho hành trình vào không gian thương mại.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="achievement-card text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="achievement-icon mx-auto mb-4">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>Người có ảnh hưởng nhất</h4>
+                    <p class="mb-0">Được tạp chí Time vinh danh là "Nhân vật của năm" vào năm 2021.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="achievement-card text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="achievement-icon mx-auto mb-4">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>Giải thưởng Edison</h4>
+                    <p class="mb-0">Nhận Huy chương Vàng Giải thưởng Edison năm 2014 cho sự đổi mới.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="achievement-card text-center p-4 bg-white rounded shadow-sm h-100">
+                    <div class="achievement-icon mx-auto mb-4">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Tỷ phú hàng đầu</h4>
+                    <p class="mb-0">Xếp hạng trong danh sách những người giàu nhất thế giới của Forbes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section-padding bg-primary text-white">
+    <div class="container" data-aos="fade-up">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="mb-3">Muốn tìm hiểu thêm về các dự án của Elon Musk?</h2>
+                <p class="mb-0">Khám phá danh mục dự án ấn tượng của Elon Musk từ SpaceX, Tesla đến Neuralink và The Boring Company.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{% url 'projects:projects' %}" class="btn btn-light btn-custom">Xem dự án <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Page Header */
+    .page-header {
+        padding: 100px 0;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        color: #fff;
+        margin-bottom: 0;
+    }
+    
+    .page-header h1 {
+        color: #fff;
+    }
+    
+    .page-header .lead {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .breadcrumb {
+        background: transparent;
+    }
+    
+    .breadcrumb-item a {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .breadcrumb-item.active {
+        color: #fff;
+    }
+    
+    .breadcrumb-item+.breadcrumb-item::before {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .min-vh-50 {
+        min-height: 50vh;
+    }
+    
+    /* About Section */
+    .about-signature {
+        bottom: 30px;
+        left: 30px;
+        max-width: 120px;
+    }
+    
+    .about-feature-item {
+        margin-bottom: 1rem;
+    }
+    
+    .about-feature-item .icon-box {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* Modern Timeline */
+    .modern-timeline {
+        position: relative;
+        padding: 40px 0;
+    }
+    
+    .timeline-wrapper {
+        position: relative;
+    }
+    
+    .timeline-wrapper:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background-color: var(--primary-light);
+        transform: translateX(-50%);
+    }
+    
+    .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+        width: 100%;
+        display: flex;
+    }
+    
+    .timeline-item.left {
+        justify-content: flex-start;
+        padding-right: 50%;
+    }
+    
+    .timeline-item.right {
+        justify-content: flex-end;
+        padding-left: 50%;
+    }
+    
+    .timeline-badge {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        z-index: 2;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .timeline-card {
+        background-color: #fff;
+        border-radius: var(--border-radius);
+        padding: 25px;
+        position: relative;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .timeline-item.left .timeline-card {
+        margin-right: 30px;
+    }
+    
+    .timeline-item.right .timeline-card {
+        margin-left: 30px;
+    }
+    
+    .timeline-item.left .timeline-card:after {
+        content: '';
+        position: absolute;
+        right: -10px;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+    
+    .timeline-item.right .timeline-card:after {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+    
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-light);
+        color: var(--primary-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+    
+    .timeline-content h4 {
+        margin-bottom: 10px;
+    }
+    
+    .timeline-content p {
+        margin-bottom: 0;
+        color: var(--text-light);
+    }
+    
+    /* Skills */
+    .skills-wrapper {
+        height: 100%;
+    }
+    
+    /* Achievements */
+    .achievement-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: var(--primary-light);
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        transition: var(--transition);
+    }
+    
+    .achievement-card:hover .achievement-icon {
+        background-color: var(--primary-color);
+        color: #fff;
+        transform: scale(1.05);
+    }
+    
+    @media (max-width: 991px) {
+        .timeline-wrapper:before {
+            left: 30px;
+        }
+        
+        .timeline-item.left, .timeline-item.right {
+            justify-content: flex-start;
+            padding-left: 80px;
+            padding-right: 0;
+        }
+        
+        .timeline-badge {
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            font-size: 14px;
+        }
+        
+        .timeline-card {
+            width: 100%;
+        }
+        
+        .timeline-item.left .timeline-card, .timeline-item.right .timeline-card {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        .timeline-item.left .timeline-card:after, .timeline-item.right .timeline-card:after {
+            left: -10px;
+            right: auto;
+        }
+    }
+</style>
+{% endblock %} 

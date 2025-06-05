@@ -1,0 +1,459 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="breadcrumb-wrap mb-2">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="{% url 'core:home' %}">Trang chủ</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Dự án</li>
+                        </ol>
+                    </nav>
+                </div>
+                <h1 class="display-4 fw-bold mb-3">Dự án công nghệ</h1>
+                <p class="lead mb-4">Khám phá những dự án đột phá và công ty của Elon Musk</p>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
+                <div class="page-header-image text-center">
+                    <img src="https://pngimg.com/uploads/elon_musk/elon_musk_PNG3.png" alt="Elon Musk" class="img-fluid" style="max-height: 350px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <span class="subtitle text-primary">Các công ty</span>
+            <h2>Công ty và dự án hàng đầu</h2>
+            <p>Elon Musk đã thành lập và lãnh đạo một số công ty đổi mới nhất thế giới, mỗi công ty đều có tầm nhìn đột phá về tương lai</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- SpaceX -->
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="project-detail-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="project-logo text-center">
+                                <img src="https://www.logo.wine/a/logo/SpaceX/SpaceX-Logo.wine.svg" alt="SpaceX Logo" class="img-fluid" style="max-height: 100px;">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h3>SpaceX</h3>
+                            <p class="text-muted">Thành lập năm 2002</p>
+                            <p>Space Exploration Technologies Corp. (SpaceX) là một công ty chế tạo hàng không vũ trụ và vận chuyển vũ trụ của Mỹ có trụ sở tại Hawthorne, California.</p>
+                            <h5>Mục tiêu:</h5>
+                            <ul>
+                                <li>Giảm chi phí vận chuyển vũ trụ</li>
+                                <li>Phát triển tên lửa tái sử dụng</li>
+                                <li>Đưa con người đến sao Hỏa</li>
+                                <li>Tạo ra một nền văn minh đa hành tinh</li>
+                            </ul>
+                            <div class="project-achievements">
+                                <h5>Thành tựu nổi bật:</h5>
+                                <span class="badge bg-light text-dark mb-2 me-2">Tên lửa Falcon 9</span>
+                                <span class="badge bg-light text-dark mb-2 me-2">Tàu vũ trụ Dragon</span>
+                                <span class="badge bg-light text-dark mb-2 me-2">Starship</span>
+                                <span class="badge bg-light text-dark mb-2 me-2">Starlink</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tesla -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-detail-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="project-logo text-center">
+                                <img src="https://www.logo.wine/a/logo/Tesla%2C_Inc./Tesla%2C_Inc.-Logomark-Black-Logo.wine.svg" alt="Tesla Logo" class="img-fluid" style="max-height: 100px;">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Tesla, Inc.</h3>
+                            <p class="text-muted">Gia nhập năm 2004, CEO từ 2008</p>
+                            <p>Tesla, Inc. là một công ty ô tô và năng lượng sạch của Mỹ có trụ sở tại Austin, Texas. Tesla thiết kế và sản xuất xe điện, pin lưu trữ năng lượng gia đình và công nghiệp, pin mặt trời, tấm lợp mặt trời và các sản phẩm liên quan.</p>
+                            <h5>Mục tiêu:</h5>
+                            <ul>
+                                <li>Đẩy nhanh quá trình chuyển đổi thế giới sang năng lượng bền vững</li>
+                                <li>Sản xuất xe điện giá cả phải chăng cho thị trường đại chúng</li>
+                                <li>Phát triển giải pháp lưu trữ năng lượng bền vững</li>
+                            </ul>
+                            <div class="project-achievements">
+                                <h5>Sản phẩm chính:</h5>
+                                <span class="badge bg-light text-dark mb-2 me-2">Model S/3/X/Y</span>
+                                <span class="badge bg-light text-dark mb-2 me-2">Cybertruck</span>
+                                <span class="badge bg-light text-dark mb-2 me-2">Powerwall</span>
+                                <span class="badge bg-light text-dark mb-2 me-2">Solar Roof</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Neuralink -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-detail-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="project-logo text-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Neuralink_logo.svg/1200px-Neuralink_logo.svg.png" alt="Neuralink Logo" class="img-fluid" style="max-height: 100px;">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Neuralink</h3>
+                            <p class="text-muted">Đồng sáng lập năm 2016</p>
+                            <p>Neuralink là một công ty công nghệ thần kinh phát triển các thiết bị cấy ghép giao diện não-máy tính (BMI). Mục tiêu ban đầu của công ty là phát triển các ứng dụng y tế để giúp những người bị chấn thương tủy sống và những tình trạng thần kinh khác.</p>
+                            <h5>Mục tiêu:</h5>
+                            <ul>
+                                <li>Phát triển giao diện não-máy tính tốc độ cao</li>
+                                <li>Điều trị các bệnh thần kinh</li>
+                                <li>Mở rộng khả năng nhận thức của con người</li>
+                                <li>Hòa hợp con người với trí tuệ nhân tạo</li>
+                            </ul>
+                            <div class="project-achievements">
+                                <h5>Công nghệ:</h5>
+                                <span class="badge bg-light text-dark mb-2 me-2">Chip N1</span>
+                                <span class="badge bg-light text-dark mb-2 me-2">Robot phẫu thuật</span>
+                                <span class="badge bg-light text-dark mb-2 me-2">Giao diện não-máy tính</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The Boring Company -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-detail-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="project-logo text-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/The_Boring_Company_Logo.svg/1200px-The_Boring_Company_Logo.svg.png" alt="The Boring Company Logo" class="img-fluid" style="max-height: 100px;">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h3>The Boring Company</h3>
+                            <p class="text-muted">Thành lập năm 2016</p>
+                            <p>The Boring Company (TBC) là một công ty cơ sở hạ tầng và xây dựng đường hầm của Mỹ được thành lập bởi Elon Musk. Mục tiêu của TBC là giải quyết vấn đề tắc nghẽn giao thông đô thị và cho phép vận chuyển nhanh chóng.</p>
+                            <h5>Mục tiêu:</h5>
+                            <ul>
+                                <li>Giảm chi phí xây dựng đường hầm</li>
+                                <li>Giải quyết tắc nghẽn giao thông đô thị</li>
+                                <li>Xây dựng hệ thống vận chuyển dưới lòng đất</li>
+                                <li>Phát triển công nghệ đào hầm tiên tiến</li>
+                            </ul>
+                            <div class="project-achievements">
+                                <h5>Dự án:</h5>
+                                <span class="badge bg-light text-dark mb-2 me-2">Las Vegas Loop</span>
+                                <span class="badge bg-light text-dark mb-2 me-2">Prufrock TBM</span>
+                                <span class="badge bg-light text-dark mb-2 me-2">Loop System</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Other Ventures Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <span class="subtitle text-primary">Các dự án khác</span>
+            <h2>Sáng kiến và đầu tư bổ sung</h2>
+            <p>Ngoài các công ty chính, Elon Musk cũng tham gia vào nhiều dự án và sáng kiến khác</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="other-venture-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="venture-icon mb-3">
+                        <i class="fab fa-twitter fa-3x text-primary"></i>
+                    </div>
+                    <h4>X (Twitter)</h4>
+                    <p>Mua lại Twitter với giá 44 tỷ đô la vào năm 2022 và đổi tên thành X, với tầm nhìn biến nó thành một nền tảng đa dụng cho mọi thứ.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="other-venture-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="venture-icon mb-3">
+                        <i class="fas fa-robot fa-3x text-primary"></i>
+                    </div>
+                    <h4>OpenAI</h4>
+                    <p>Đồng sáng lập OpenAI vào năm 2015, một công ty nghiên cứu trí tuệ nhân tạo nhằm phát triển AI thân thiện và đảm bảo AI mang lại lợi ích cho toàn nhân loại.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="other-venture-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="venture-icon mb-3">
+                        <i class="fas fa-solar-panel fa-3x text-primary"></i>
+                    </div>
+                    <h4>SolarCity</h4>
+                    <p>Giúp thành lập SolarCity, hiện là một phần của Tesla Energy, nhằm đẩy nhanh việc áp dụng năng lượng mặt trời sạch và giảm chi phí năng lượng cho khách hàng.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <span class="subtitle text-primary">Tiến độ</span>
+            <h2>Dòng thời gian phát triển dự án</h2>
+            <p>Theo dõi hành trình của các công ty và dự án quan trọng của Elon Musk qua các năm</p>
+        </div>
+        
+        <div class="timeline-horizontal" data-aos="fade-up">
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2002</div>
+                    <div class="timeline-content">
+                        <h5>Thành lập SpaceX</h5>
+                        <p>Với mục tiêu giảm chi phí vận chuyển không gian và đưa con người lên sao Hỏa</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2004</div>
+                    <div class="timeline-content">
+                        <h5>Đầu tư vào Tesla</h5>
+                        <p>Tham gia Tesla với vai trò nhà đầu tư chính và chủ tịch hội đồng quản trị</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2006</div>
+                    <div class="timeline-content">
+                        <h5>SolarCity</h5>
+                        <p>Giúp tạo ra SolarCity, công ty năng lượng mặt trời, sau đó được Tesla mua lại vào năm 2016</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2015</div>
+                    <div class="timeline-content">
+                        <h5>OpenAI</h5>
+                        <p>Đồng sáng lập OpenAI, một tổ chức nghiên cứu trí tuệ nhân tạo phi lợi nhuận</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2016</div>
+                    <div class="timeline-content">
+                        <h5>Neuralink & The Boring Company</h5>
+                        <p>Thành lập hai công ty mới: Neuralink và The Boring Company</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h5>Mua lại Twitter</h5>
+                        <p>Mua lại Twitter với giá 44 tỷ đô la và sau đó đổi tên thành X</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section-padding bg-primary text-white">
+    <div class="container" data-aos="fade-up">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="mb-3">Bạn quan tâm đến kỹ năng và phương pháp làm việc của Elon Musk?</h2>
+                <p class="mb-0">Khám phá những kỹ năng và phương pháp đã giúp Elon Musk thành công trong nhiều lĩnh vực khác nhau.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{% url 'skills:skills' %}" class="btn btn-light btn-custom">Xem kỹ năng <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Page Header */
+    .page-header {
+        padding: 100px 0;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        color: #fff;
+        margin-bottom: 0;
+    }
+    
+    .page-header h1 {
+        color: #fff;
+    }
+    
+    .page-header .lead {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .breadcrumb {
+        background: transparent;
+    }
+    
+    .breadcrumb-item a {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .breadcrumb-item.active {
+        color: #fff;
+    }
+    
+    .breadcrumb-item+.breadcrumb-item::before {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .min-vh-50 {
+        min-height: 50vh;
+    }
+    
+    /* Project Cards */
+    .project-detail-card {
+        transition: all 0.3s ease;
+        border-bottom: 3px solid transparent;
+    }
+    
+    .project-detail-card:hover {
+        transform: translateY(-5px);
+        border-bottom: 3px solid var(--primary-color);
+    }
+    
+    .project-logo img {
+        transition: all 0.3s ease;
+    }
+    
+    .project-detail-card:hover .project-logo img {
+        transform: scale(1.05);
+    }
+    
+    /* Other Ventures */
+    .other-venture-card {
+        transition: all 0.3s ease;
+    }
+    
+    .other-venture-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .venture-icon {
+        transition: all 0.3s ease;
+    }
+    
+    .other-venture-card:hover .venture-icon {
+        transform: scale(1.1);
+    }
+    
+    /* Horizontal Timeline */
+    .timeline-horizontal {
+        position: relative;
+        padding: 20px 0;
+        margin: 40px 0;
+    }
+    
+    .timeline-container {
+        position: relative;
+        width: 100%;
+        padding: 40px 0;
+    }
+    
+    .timeline-container:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--primary-color);
+        transform: translateY(-50%);
+    }
+    
+    .timeline-item {
+        position: relative;
+        display: inline-block;
+        width: 16.66%;
+        padding: 0 15px;
+        text-align: center;
+        vertical-align: top;
+    }
+    
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        position: absolute;
+        top: -28px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    
+    .timeline-date {
+        font-weight: bold;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+    
+    .timeline-content {
+        background: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+    
+    .timeline-content h5 {
+        margin-bottom: 10px;
+    }
+    
+    .timeline-content p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    
+    @media (max-width: 991px) {
+        .timeline-item {
+            width: 33.33%;
+            margin-bottom: 30px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .timeline-item {
+            width: 50%;
+        }
+    }
+    
+    @media (max-width: 575px) {
+        .timeline-item {
+            width: 100%;
+        }
+    }
+</style>
+{% endblock %} 

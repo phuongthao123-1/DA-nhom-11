@@ -1,0 +1,528 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header bg-primary text-white text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" data-aos="fade-up">
+                <h1 class="display-4 fw-bold mb-3">Blog</h1>
+                <p class="lead mb-0">Khám phá những suy nghĩ, cập nhật và thông tin chi tiết mới nhất về các dự án và tầm nhìn của Elon Musk</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Detail Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <!-- Blog Content -->
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="blog-detail" data-aos="fade-up">
+                    <!-- Featured Image -->
+                    <div class="blog-detail-img mb-4">
+                        {% if post.featured_image %}
+                            <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="img-fluid rounded">
+                        {% else %}
+                            <img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BhY2V4fGVufDB8fDB8fHww" alt="{{ post.title }}" class="img-fluid rounded">
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Post Meta -->
+                    <div class="blog-meta mb-4">
+                        <span><i class="fas fa-calendar-alt me-2"></i>{{ post.created_at|date:"d F, Y" }}</span>
+                        <span><i class="fas fa-folder me-2"></i>{{ post.category.name }}</span>
+                        <span><i class="fas fa-user me-2"></i>Admin</span>
+                    </div>
+                    
+                    <!-- Post Title -->
+                    <h1 class="blog-title mb-4">{{ post.title }}</h1>
+                    
+                    <!-- Post Content -->
+                    <div class="blog-content">
+                        {{ post.content|safe }}
+                    </div>
+                    
+                    <!-- Tags -->
+                    {% if post.tags.all %}
+                    <div class="blog-tags mt-5">
+                        <h5 class="mb-3">Thẻ:</h5>
+                        <div class="tags">
+                            {% for tag in post.tags.all %}
+                                <a href="{% url 'blog:blog_list' %}?tag={{ tag.slug }}">{{ tag.name }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    <!-- Share -->
+                    <div class="blog-share mt-5">
+                        <h5 class="mb-3">Chia sẻ:</h5>
+                        <div class="share-buttons">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ post.title }}" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ post.title }}" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:?subject={{ post.title }}&body=Xem bài viết này: {{ request.build_absolute_uri }}" class="email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Post Navigation -->
+                    <div class="blog-navigation mt-5">
+                        <div class="row">
+                            <div class="col-6">
+                                {% if prev_post %}
+                                <div class="nav-previous">
+                                    <a href="{% url 'blog:blog_detail' prev_post.id prev_post.slug %}">
+                                        <span><i class="fas fa-arrow-left me-2"></i>Bài trước</span>
+                                        <h6>{{ prev_post.title|truncatechars:30 }}</h6>
+                                    </a>
+                                </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-6 text-end">
+                                {% if next_post %}
+                                <div class="nav-next">
+                                    <a href="{% url 'blog:blog_detail' next_post.id next_post.slug %}">
+                                        <span>Bài tiếp theo<i class="fas fa-arrow-right ms-2"></i></span>
+                                        <h6>{{ next_post.title|truncatechars:30 }}</h6>
+                                    </a>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Search Widget -->
+                <div class="sidebar-widget mb-4" data-aos="fade-up">
+                    <div class="widget-title">
+                        <h4>Tìm kiếm</h4>
+                    </div>
+                    <div class="search-form">
+                        <form action="{% url 'blog:blog_list' %}" method="get">
+                            <div class="input-group">
+                                <input type="text" name="q" class="form-control" placeholder="Tìm kiếm bài viết...">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Categories Widget -->
+                <div class="sidebar-widget mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="widget-title">
+                        <h4>Danh mục</h4>
+                    </div>
+                    <ul class="categories-list">
+                        {% for category in categories %}
+                            <li>
+                                <a href="{% url 'blog:blog_list' %}?category={{ category.slug }}">
+                                    {{ category.name }} <span>({{ category.posts.count }})</span>
+                                </a>
+                            </li>
+                        {% empty %}
+                            <li>Chưa có danh mục nào</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <!-- Recent Posts Widget -->
+                <div class="sidebar-widget mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="widget-title">
+                        <h4>Bài viết gần đây</h4>
+                    </div>
+                    <ul class="recent-posts">
+                        {% for post in recent_posts %}
+                            <li>
+                                <div class="post-thumb">
+                                    {% if post.featured_image %}
+                                        <img src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                                    {% else %}
+                                        <img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BhY2V4fGVufDB8fDB8fHww" alt="{{ post.title }}">
+                                    {% endif %}
+                                </div>
+                                <div class="post-info">
+                                    <h6><a href="{% url 'blog:blog_detail' post.id post.slug %}">{{ post.title }}</a></h6>
+                                    <span><i class="far fa-calendar-alt"></i> {{ post.created_at|date:"d F, Y" }}</span>
+                                </div>
+                            </li>
+                        {% empty %}
+                            <li>Chưa có bài viết nào</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <!-- Tags Widget -->
+                <div class="sidebar-widget" data-aos="fade-up" data-aos-delay="300">
+                    <div class="widget-title">
+                        <h4>Thẻ</h4>
+                    </div>
+                    <div class="tags">
+                        {% for tag in tags %}
+                            <a href="{% url 'blog:blog_list' %}?tag={{ tag.slug }}">{{ tag.name }}</a>
+                        {% empty %}
+                            <span>Chưa có thẻ nào</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Posts Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+            <h2>Bài viết liên quan</h2>
+            <p>Khám phá thêm về các chủ đề tương tự</p>
+        </div>
+        <div class="row">
+            {% for related_post in related_posts %}
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:"100" }}">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            {% if related_post.featured_image %}
+                                <img src="{{ related_post.featured_image.url }}" alt="{{ related_post.title }}" class="img-fluid">
+                            {% else %}
+                                <img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BhY2V4fGVufDB8fDB8fHww" alt="{{ related_post.title }}" class="img-fluid">
+                            {% endif %}
+                            <div class="blog-date">{{ related_post.created_at|date:"d F, Y" }}</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-folder"></i> {{ related_post.category.name }}</span>
+                                <span><i class="fas fa-user"></i> Admin</span>
+                            </div>
+                            <h4><a href="{% url 'blog:blog_detail' related_post.id related_post.slug %}">{{ related_post.title }}</a></h4>
+                            <p>{{ related_post.excerpt }}</p>
+                            <a href="{% url 'blog:blog_detail' related_post.id related_post.slug %}" class="read-more">Đọc thêm <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="col-12 text-center">
+                    <p>Không có bài viết liên quan.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA Section -->
+<section class="bg-primary section-padding text-white">
+    <div class="container text-center" data-aos="fade-up">
+        <h2 class="mb-4">Liên hệ với chúng tôi ngay hôm nay</h2>
+        <p class="mb-4">Bạn có câu hỏi hoặc muốn biết thêm thông tin về Elon Musk và các dự án của ông? Hãy liên hệ với chúng tôi ngay bây giờ.</p>
+        <a href="{% url 'contact:contact' %}" class="btn btn-outline-light btn-custom">Liên hệ ngay</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Blog Detail Styles */
+    .blog-detail-img img {
+        width: 100%;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    
+    .blog-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .blog-meta span {
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+    
+    .blog-meta i {
+        color: var(--primary-color);
+    }
+    
+    .blog-title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .blog-content {
+        color: var(--text-color);
+        line-height: 1.8;
+    }
+    
+    .blog-content p, .blog-content ul, .blog-content ol {
+        margin-bottom: 1.5rem;
+    }
+    
+    .blog-content h2, .blog-content h3, .blog-content h4 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .blog-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 2rem 0;
+    }
+    
+    .blog-content a {
+        color: var(--primary-color);
+        text-decoration: underline;
+    }
+    
+    .blog-content a:hover {
+        color: var(--primary-dark);
+    }
+    
+    .blog-content blockquote {
+        background: #f9f9f9;
+        border-left: 4px solid var(--primary-color);
+        padding: 1rem 1.5rem;
+        margin: 2rem 0;
+        font-style: italic;
+    }
+    
+    .blog-tags .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .blog-share .share-buttons {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .blog-share .share-buttons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: #fff;
+        transition: var(--transition);
+    }
+    
+    .blog-share .facebook {
+        background: #3b5998;
+    }
+    
+    .blog-share .twitter {
+        background: #1da1f2;
+    }
+    
+    .blog-share .linkedin {
+        background: #0077b5;
+    }
+    
+    .blog-share .email {
+        background: #ea4335;
+    }
+    
+    .blog-share a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .blog-navigation {
+        padding-top: 30px;
+        border-top: 1px solid #eee;
+    }
+    
+    .blog-navigation a {
+        display: block;
+        padding: 15px;
+        border-radius: var(--border-radius);
+        background: #f8f9fa;
+        transition: var(--transition);
+    }
+    
+    .blog-navigation a:hover {
+        background: var(--primary-color);
+        color: #fff;
+    }
+    
+    .blog-navigation span {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .blog-navigation h6 {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    
+    .blog-navigation a:hover span, 
+    .blog-navigation a:hover h6 {
+        color: #fff;
+    }
+    
+    /* Sidebar Styles */
+    .sidebar-widget {
+        background: #fff;
+        border-radius: var(--border-radius);
+        padding: 25px;
+        box-shadow: var(--box-shadow);
+        margin-bottom: 30px;
+    }
+    
+    .widget-title {
+        position: relative;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .widget-title h4 {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+    }
+    
+    .widget-title::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 40px;
+        height: 3px;
+        background: var(--primary-color);
+    }
+    
+    .categories-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .categories-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .categories-list li:last-child {
+        border-bottom: none;
+    }
+    
+    .categories-list a {
+        color: var(--text-color);
+        display: flex;
+        justify-content: space-between;
+        transition: var(--transition);
+    }
+    
+    .categories-list a:hover {
+        color: var(--primary-color);
+        padding-left: 5px;
+    }
+    
+    .recent-posts {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .recent-posts li {
+        display: flex;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .recent-posts li:last-child {
+        border-bottom: none;
+    }
+    
+    .post-thumb {
+        flex: 0 0 70px;
+        height: 60px;
+        margin-right: 15px;
+    }
+    
+    .post-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    .post-info h6 {
+        font-size: 0.95rem;
+        margin-bottom: 5px;
+        line-height: 1.4;
+    }
+    
+    .post-info h6 a {
+        color: var(--text-color);
+        transition: var(--transition);
+    }
+    
+    .post-info h6 a:hover {
+        color: var(--primary-color);
+    }
+    
+    .post-info span {
+        font-size: 0.8rem;
+        color: var(--text-light);
+    }
+    
+    .post-info span i {
+        margin-right: 5px;
+    }
+    
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .tags a {
+        display: inline-block;
+        padding: 6px 14px;
+        background: #f5f5f5;
+        color: var(--text-color);
+        border-radius: 4px;
+        font-size: 0.85rem;
+        transition: var(--transition);
+    }
+    
+    .tags a:hover {
+        background: var(--primary-color);
+        color: #fff;
+    }
+    
+    @media (max-width: 991px) {
+        .blog-title {
+            font-size: 1.75rem;
+        }
+    }
+    
+    @media (max-width: 575px) {
+        .blog-title {
+            font-size: 1.5rem;
+        }
+        
+        .blog-navigation .nav-previous,
+        .blog-navigation .nav-next {
+            text-align: center;
+        }
+    }
+</style>
+{% endblock %} 
